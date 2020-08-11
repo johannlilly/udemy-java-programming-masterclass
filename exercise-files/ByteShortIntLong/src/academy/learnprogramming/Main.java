@@ -42,7 +42,8 @@ public class Main {
         // byte myNewByteValue = (myMinByteValue / 2);
         // solution: cast
         byte myNewByteValue = (byte) (myMinByteValue / 2);
-     
+
         short myNewShortValue = (short) (myMinShortValue / 2);
+
     }
 }
