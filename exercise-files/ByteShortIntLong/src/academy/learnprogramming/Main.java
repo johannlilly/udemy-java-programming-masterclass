@@ -37,6 +37,12 @@ public class Main {
 
         short bigShortLiteralValue = 32767; // 32768 is invalid as the literal number cannot fit
 
+        int myTotal = (myMinIntValue / 2);
+        // invalid, as the variable is divided instead of the literal value. myMinByteValue is treated as {int}
+        // byte myNewByteValue = (myMinByteValue / 2);
+        // solution: cast
+        byte myNewByteValue = (byte) (myMinByteValue / 2);
      
+        short myNewShortValue = (short) (myMinShortValue / 2);
     }
 }
