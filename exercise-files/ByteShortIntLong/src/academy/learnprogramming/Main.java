@@ -25,6 +25,13 @@ public class Main {
         short myMaxShortValue = Short.MAX_VALUE;
         System.out.println("Short Minimum Value = " + myMinShortValue);
         System.out.println("Short Maximum Value = " + myMaxShortValue);
+
+        long myLongValue = 100L; // put letter "l" on the end, capitalized for legibility
+        long myMinLongValue = Long.MIN_VALUE;
+        long myMaxLongValue = Long.MAX_VALUE;
+        System.out.println("Long Minimum Value = " + myMinLongValue);
+        System.out.println("Long Maximum Value = " + myMaxLongValue);
+        long libLongLiteralValue = 2_147_483_647_234; // value too large without "L", treated as {int}
      
     }
 }
