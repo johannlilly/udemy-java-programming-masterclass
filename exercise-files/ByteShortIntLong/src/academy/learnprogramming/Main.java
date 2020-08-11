@@ -31,7 +31,12 @@ public class Main {
         long myMaxLongValue = Long.MAX_VALUE;
         System.out.println("Long Minimum Value = " + myMinLongValue);
         System.out.println("Long Maximum Value = " + myMaxLongValue);
-        long libLongLiteralValue = 2_147_483_647_234; // value too large without "L", treated as {int}
+        // long bigLongLiteralValue = 2_147_483_647_234; // value too large without "L", treated as {int}
+        long bigLongLiteralValue = 2_147_483_647_234L;
+        System.out.println(bigLongLiteralValue);
+
+        short bigShortLiteralValue = 32767; // 32768 is invalid as the literal number cannot fit
+
      
     }
 }
