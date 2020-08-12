@@ -21,8 +21,13 @@ public class Main {
         System.out.println("MyDoubleValue = " + myDoubleValue);
 
         double numberOfPounds = 360d;
-        double numberOfKilograms = (double) numberOfPounds * 0.45359237d;
-        System.out.println("Number of pounds in kilograms = " + numberOfKilograms);
+        double convertToKilograms = (double) numberOfPounds * 0.45359237d;
+        System.out.println("Number of pounds in kilograms = " + convertToKilograms);
+
+        double pi = 3.1415927d;
+        double anotherNumber = 3_000_000.4_567_890d;
+        System.out.println(pi);
+        System.out.println(convertToKilograms);
 
     }
 
