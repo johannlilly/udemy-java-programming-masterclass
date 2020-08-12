@@ -13,9 +13,12 @@ public class Main {
         System.out.println("Double minimum value = " + myMinDoubleValue);
         System.out.println("Double maximum value = " + myMaxDoubleValue);
 
-        int myIntValue = 5;
-        float myFloatValue = 5.25f; // or (float) 5.25; assumed to be a double so need to cast; not recommended
-        double myDoubleValue = 5d; // default when you have a decimal; double is best practice
+        int myIntValue = 5 / 3;
+        float myFloatValue = 5f / 3f;
+        double myDoubleValue = 5d / 3d; // 5.00 / 3.00
+        System.out.println("MyIntValue = " + myIntValue);
+        System.out.println("MyFloatValue = " + myFloatValue);
+        System.out.println("MyDoubleValue = " + myDoubleValue);
 
     }
 
