@@ -20,6 +20,10 @@ public class Main {
         System.out.println("MyFloatValue = " + myFloatValue);
         System.out.println("MyDoubleValue = " + myDoubleValue);
 
+        double numberOfPounds = 360d;
+        double numberOfKilograms = (double) numberOfPounds * 0.45359237d;
+        System.out.println("Number of pounds in kilograms = " + numberOfKilograms);
+
     }
 
 }
