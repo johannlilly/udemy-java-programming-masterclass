@@ -28,6 +28,8 @@ public class Main {
         lastString = lastString + doubleNumber;
         System.out.println("LastString is equal to " + lastString); // 1050120.47
 
+        // strings are immutable
+
     }
 
 }
