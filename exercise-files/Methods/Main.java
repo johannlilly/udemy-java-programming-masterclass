@@ -61,11 +61,13 @@ public class Main {
 
   public static int calculateHighScorePosition(int score) {
 
-    return 
+    int position =
       score >= 1000 ? 1 :
       score >= 500  ? 2 :
       score >= 100  ? 3 :
       4;
+    
+    return position;
 
   }
 
