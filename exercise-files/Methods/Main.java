@@ -63,8 +63,8 @@ public class Main {
 
     return 
       score >= 1000 ? 1 :
-      score >= 500 && score < 1000 ? 2 :
-      score >= 100 && score < 500 ? 3 :
+      score >= 500  ? 2 :
+      score >= 100  ? 3 :
       4;
 
   }
