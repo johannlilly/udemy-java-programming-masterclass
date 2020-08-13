@@ -3,26 +3,37 @@ public class Main {
   public static void main (String[] args) {
 
     boolean gameOver = true;
-    int score = 800;
-    int levelCompleted = 5;
-    int bonus = 100;
+    String name;
+    int score;
+    int levelCompleted;
+    int bonus;
+    int highScore;
 
-    calculateScore(
-      gameOver,
-      score,
-      levelCompleted,
-      bonus
+    name = "Ash";
+    score = 800;
+    levelCompleted = 5;
+    bonus = 100;
+
+    highScore = calculateScore(gameOver, score, levelCompleted, bonus);
+    System.out.println("Your final score was " + highScore);
+
+    displayHighScorePosition(
+      name, 
+      calculateHighScorePosition(highScore)
     );
 
+
+    name = "Blue";
     score = 10_000;
     levelCompleted = 8;
     bonus = 200;
 
-    calculateScore(
-      gameOver,
-      score,
-      levelCompleted,
-      bonus
+    highScore = calculateScore(gameOver, score, levelCompleted, bonus);
+    System.out.println("Your final score was " + highScore);
+    
+    displayHighScorePosition(
+      name, 
+      calculateHighScorePosition(highScore)
     );
 
   }
@@ -32,11 +43,26 @@ public class Main {
     if (gameOver) {
       int finalScore = score + (levelCompleted * bonus);
       finalScore += 2_000;
-      System.out.println("Your final score was " + finalScore);
       return finalScore;
     }
-    
+
     return -1;
+
+  }
+
+  public static void displayHighScorePosition(String name, int position) {
+
+    System.out.println("Player " + name + " managed to get into position " + position + " on the high score table");
+
+  }
+
+  public static int calculateHighScorePosition(int score) {
+
+    return 
+      score > 1000 ? 1 :
+      score > 500 && score < 1000 ? 2 :
+      score > 100 && score < 500 ? 3 :
+      4;
 
   }
 
