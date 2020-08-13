@@ -9,6 +9,8 @@ public class Main {
     int bonus;
     int highScore;
 
+    // Player 1
+
     name = "Ash";
     score = 800;
     levelCompleted = 5;
@@ -22,6 +24,7 @@ public class Main {
       calculateHighScorePosition(highScore)
     );
 
+    // Player 2
 
     name = "Blue";
     score = 10_000;
@@ -59,9 +62,9 @@ public class Main {
   public static int calculateHighScorePosition(int score) {
 
     return 
-      score > 1000 ? 1 :
-      score > 500 && score < 1000 ? 2 :
-      score > 100 && score < 500 ? 3 :
+      score >= 1000 ? 1 :
+      score >= 500 && score < 1000 ? 2 :
+      score >= 100 && score < 500 ? 3 :
       4;
 
   }
