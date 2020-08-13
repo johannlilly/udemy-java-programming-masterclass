@@ -78,6 +78,19 @@ public class Main {
             System.out.println("wasCar is true");
         }
 
+        double challengeDouble = 20.00d;
+        double secondDouble = 80.00d;
+        double challengeSum = (challengeDouble + secondDouble) * 100.00d;
+        // System.out.println(challengeSum);
+        double challengeRemainder = challengeSum % 40.00d;
+        // System.out.println(challengeRemainder);
+        boolean isChallengeRemainder = (challengeRemainder == 0d) ? true : false;
+        // Is the remainder == 0?
+        System.out.println(isChallengeRemainder);
+        if (!isChallengeRemainder) {
+            System.out.println("Got some remainder");
+        }
+
     }
 
 }
