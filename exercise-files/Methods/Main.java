@@ -14,11 +14,15 @@ public class Main {
       bonus
     );
 
+    score = 10_000;
+    levelCompleted = 8;
+    bonus = 200;
+
     calculateScore(
-      true,
-      10_000,
-      8,
-      200
+      gameOver,
+      score,
+      levelCompleted,
+      bonus
     );
 
   }
