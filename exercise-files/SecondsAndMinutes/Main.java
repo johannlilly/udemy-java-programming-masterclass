@@ -14,15 +14,17 @@ public class Main {
     : !(minutes >= 0 && seconds >= 0 && seconds < 60)
       ? "Invalid value"
       // XXh YYm ZZs
-      : (int) Math.floor(minutes / 60) + "h " + minutes % 60 + "m " + seconds + "s";
+      : minutes >= 0 && minutes < 10
+        ? (int) Math.floor(minutes / 60) + "h 0" + minutes % 60 + "m " + seconds + "s"
+        : (int) Math.floor(minutes / 60) + "h " + minutes % 60 + "m " + seconds + "s";
 
   }
 
   public static String getDurationString(int seconds) {
 
-    return !(seconds >= 0)
-    ? "Invalid value"
-    : getDurationString((int) Math.floor(seconds / 60) , seconds % 60);
+    return seconds >= 0
+    ? getDurationString((int) Math.floor(seconds / 60) , seconds % 60)
+    : "Invalid value";
 
   }
 
