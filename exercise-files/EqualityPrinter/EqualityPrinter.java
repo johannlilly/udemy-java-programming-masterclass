@@ -8,7 +8,7 @@ public class IntEqualityPrinter {
     ? ERROR_MESSAGE
     : a == b && b == c
       ? EQUALITY_MESSAGE
-      : a == b || b == c
+      : a == b || b == c || a == c
         ? SEMI_EQUALITY_MESSAGE
         : INEQUALITY_MESSAGE;
     
