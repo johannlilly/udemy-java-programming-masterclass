@@ -22,6 +22,7 @@ public class Switch {
 
         case 3:case 4:case 5:
           System.out.println("Value was 3, 4, or 5");
+          System.out.println("Actually it was a " + switchValue);
           break;
 
         default:
@@ -30,5 +31,23 @@ public class Switch {
       }
 
       // more code here, where program continues after {break}
+
+      char switchChallengeValue = "A";
+
+      switch(switchChallengeValue) {
+        case "A":
+          System.out.println("The value is A");
+          break;
+        case "B":
+          System.out.println("The value is B");
+          break;
+        case "C": case "D" : case "E":
+          System.out.println("The value is " + switchChallengeValue);
+          break;
+        default:
+          System.out.println("Not found");
+          break;
+      }
+
     }
 }
