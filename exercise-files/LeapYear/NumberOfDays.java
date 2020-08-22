@@ -11,35 +11,15 @@ public class NumberOfDaysInMonth {
       : false
     ;
   }
-  // the compiler is very picky
   public static int getDaysInMonth(int month, int year) {
-    if (month < 1 || month > 12 || year < 1 || year >= 10_000) {return -1;}
-    int daysInMonth;
-    if (isLeapYear(year)) {
-      switch(month) {
-        case 2:
-        daysInMonth = 29;
-          break;
-        case 4: case 6: case 9: case 11:
-          daysInMonth = 30;
-          break;
-        default:
-          daysInMonth = 31;
-          break;
-      }
-    } else {
-      switch(month) {
-        case 2:
-          daysInMonth = 28;
-          break;
-        case 4: case 6: case 9: case 11:
-          daysInMonth = 30;
-          break;
-        default:
-          daysInMonth = 31;
-          break;  
-      }
-    }
-    return daysInMonth;
+    return month < 1 || month > 12 || year < 1 || year >= 10_000
+    ?  -1
+    : month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12
+      ? 31
+      : month == 4 || month == 6 || month == 9 || month == 11
+        ? 30
+        : month == 2 && isLeapYear(year)
+          ? 29
+          : 28;
   }
 }
