@@ -6,8 +6,14 @@ public class WhileDoWhile {
       count++;
     }
 
-    for (int i = 0; i != 5; i++) {
-      System.out.println("Count value is " + i);
+    count = 1;
+    while(true) {
+      if (count == 6) {
+        break;
+      }
+      System.out.println("Count value is " + count);
+      count++;
     }
+
   }
 }
