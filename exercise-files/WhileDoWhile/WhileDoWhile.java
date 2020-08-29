@@ -16,10 +16,12 @@ public class WhileDoWhile {
     }
 
     count = 6;
-    // guaranteed to run at least once
     do {
       System.out.println("Count value was " + count);
       count++;
+      if (count > 100) {
+        break;
+      }
     } while (count != 6);
   }
 }
