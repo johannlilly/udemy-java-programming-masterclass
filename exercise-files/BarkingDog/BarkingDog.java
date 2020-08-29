@@ -1,4 +1,4 @@
-public class Main {
+public class BarkingDog {
   public static void main(String[] args) {
     shouldWakeUp(true, 1);
     shouldWakeUp(false, 2);
