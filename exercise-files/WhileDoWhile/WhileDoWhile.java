@@ -1,27 +1,19 @@
 public class WhileDoWhile {
   public static void main(String[] args) {
-    int count = 0;
-    while (count != 5) {
-      System.out.println("Count value is " + count);
-      count++;
-    }
+    int number = 4;
+    int finishNumber = 20;
 
-    count = 1;
-    while(true) {
-      if (count == 6) {
-        break;
-      }
-      System.out.println("Count value is " + count);
-      count++;
-    }
+    while (number <= finishNumber) {
+      number++;
 
-    count = 6;
-    do {
-      System.out.println("Count value was " + count);
-      count++;
-      if (count > 100) {
-        break;
+      if (!isEvenNumber(number)) {
+        continue; // bypass any code following this `if` code block and return to the while loop
       }
-    } while (count != 6);
+
+      System.out.println("Even number " + number);
+    }
+  }
+  public static boolean isEvenNumber(int number) {
+    return ((number % 2) == 0 && (number >= 0));
   }
 }
